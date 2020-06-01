@@ -83,6 +83,28 @@ class LinkedList(object):
             current = _next
         self.head = prev
 
+    def insert_after(self, existing_value, new_value):
+        _head = self.head
+
+        # create new node with new_node
+        new_node = Node(new_value)
+
+        prev = None
+
+        # loop through all nodes and insert after that
+        while _head is not None:
+            if _head.value == existing_value:
+                prev = _head
+                break
+            _head = _head.next
+
+        if prev is None:
+            print("no existing value found")
+            return
+
+        new_node.next = prev.next
+        prev.next = new_node
+
 
 linkedList = LinkedList()
 linkedList.push(4)
@@ -95,10 +117,13 @@ print("Sum for the provide linked list is : %s " % linkedList.sum())
 print("length of the provided linked list is : %s" % linkedList.length())
 print("Before deleting element")
 linkedList.print()
-print("Delete one element")
-linkedList.remove(85)
-print("After deleting the values")
+# print("Delete one element")
+# linkedList.remove(85)
+# print("After deleting the values")
+# linkedList.print()
+print("insert after 3")
+linkedList.insert_after(30, 7)
 linkedList.print()
-linkedList.reverse()
-print("reverse linkedlist")
-linkedList.print()
+# linkedList.reverse()
+# print("reverse linkedlist")
+# linkedList.print()
