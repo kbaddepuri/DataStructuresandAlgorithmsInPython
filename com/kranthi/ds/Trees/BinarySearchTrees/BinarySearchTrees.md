@@ -14,7 +14,6 @@ The left and right subtree each must also be a binary search tree.
 There must be no duplicate nodes.
 </p>
 <h3>Searching a key</h3>
-
 <p>
 For searching a value, if we had a sorted array we could have performed a binary search. Let’s say we want to search 
 a number in the array what we do in binary search is we first define the complete list as our search space, the number 
