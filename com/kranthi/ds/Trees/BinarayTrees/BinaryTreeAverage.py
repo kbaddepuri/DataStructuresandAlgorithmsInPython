@@ -14,8 +14,8 @@ def _collect(node, data, depth=0):
     else:
         val, count = depth[data]
         val += node.value
-        count += 1;
-        depth[data] = (val, count)
+        count += 1
+        data[depth] = (val, count)
 
     _collect(node.left, data, depth + 1)
     _collect(node.right, data, depth + 1)
