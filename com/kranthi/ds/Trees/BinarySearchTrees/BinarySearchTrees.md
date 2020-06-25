@@ -36,3 +36,15 @@ a search space of ‘n’nodes and when we will discard one of the sub-trees we 
  like this till we find the element or till our search space is reduced to only one node. The search here is also a 
  binary search and that’s why the name binary search tree.
 </p>
+<p>
+<h3>Insertion of a key</h3>
+A new key is always inserted at leaf. We start searching a key from root till we hit a leaf node. Once a leaf node is found, the new node is added as a child of the leaf node.
+
+         100                               100
+        /   \        Insert 40            /    \
+      20     500    --------->          20     500 
+     /  \                              /  \  
+    10   30                           10   30
+                                              \   
+                                              40
+</p>
