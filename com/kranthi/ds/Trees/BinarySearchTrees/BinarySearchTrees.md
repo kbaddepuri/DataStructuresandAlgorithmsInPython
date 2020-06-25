@@ -48,3 +48,34 @@ A new key is always inserted at leaf. We start searching a key from root till we
                                               \   
                                               40
 </p>
+
+<h3>Deletion</h3>
+<p>
+When we delete a node, three possibilities arise.
+1) Node to be deleted is leaf: Simply remove from the tree.
+
+              50                            50
+           /     \         delete(20)      /   \
+          30      70       --------->    30     70 
+         /  \    /  \                     \    /  \ 
+       20   40  60   80                   40  60   80
+2) Node to be deleted has only one child: Copy the child to the node and delete the child
+
+              50                            50
+           /     \         delete(30)      /   \
+          30      70       --------->    40     70 
+            \    /  \                          /  \ 
+            40  60   80                       60   80
+3) Node to be deleted has two children: Find inorder successor of the node. 
+Copy contents of the inorder successor to the node and delete the inorder successor. 
+Note that inorder predecessor can also be used.
+
+              50                            60
+           /     \         delete(50)      /   \
+          40      70       --------->    40    70 
+                 /  \                            \ 
+                60   80                           80
+The important thing to note is, inorder successor is needed only when right child is not empty. 
+In this particular case, inorder successor can be obtained by finding the minimum value in 
+right child of the node
+</p>
