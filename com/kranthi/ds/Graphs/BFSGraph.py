@@ -15,7 +15,7 @@ class Graph(object):
         # Create aqueue for bfs
         queue = []
 
-        # Mark source node as visited and enqueue it
+        # Mark source Node as visited and enqueue it
         queue.append(s)
         visited[s] = True
 
