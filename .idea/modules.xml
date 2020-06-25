@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MyPracticeForFB.iml" filepath="$PROJECT_DIR$/.idea/MyPracticeForFB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DataStructuresInPython/.idea/DataStructuresInPython.iml" filepath="$PROJECT_DIR$/../DataStructuresInPython/.idea/DataStructuresInPython.iml" />
     </modules>
   </component>
 </project>
