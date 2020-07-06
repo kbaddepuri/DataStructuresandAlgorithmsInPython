@@ -43,13 +43,14 @@ _/\      _
 He enters and leaves one valley.
 """
 
-#!/bin/python3
+# !/bin/python3
 
 import math
 import os
 import random
 import re
 import sys
+
 
 # Complete the countingValleys function below.
 def countingValleys(n, s):
@@ -63,11 +64,12 @@ def countingValleys(n, s):
             see_level -= 1
             if see_level < 0:
                 is_vally_started = True
-        if see_level == 0 and is_vally_started == True:
+        if see_level == 0 and is_vally_started is True:
             vally += 1
             is_vally_started = False
 
     return vally
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
