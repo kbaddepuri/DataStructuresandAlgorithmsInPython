@@ -27,3 +27,26 @@ When we perform  left rotations, the array undergoes the following sequence of c
 
 Thus, we print the array's final state as a single line of space-separated values, which is 5 1 2 3 4.
 """
+import math
+import os
+import random
+import re
+import sys
+
+def left_rotation(a, d):
+    while d > 0:
+        v = a.pop(0) # delete value from the begining and get that value as pop() method returns the deleted value
+        a.append(v) # Append function will always append value at the end of list
+        d -= 1
+    for i in a:
+        print(i, end=" ")
+
+if __name__ == '__main__':
+    nd = input().split()
+
+    n = int(nd[0])
+
+    d = int(nd[1])
+
+    a = list(map(int, input().rstrip().split()))
+    left_rotation(a, d)
