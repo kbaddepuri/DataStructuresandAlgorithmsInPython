@@ -32,6 +32,11 @@ class BinarySearchTree(object):
             self.root = node
             return
 
+    def insert(self, root, node):
+        if self.root is None:
+            self.root = node
+            return
+
         if root.value < node.value:
             if root.right is None:
                 root.right = node

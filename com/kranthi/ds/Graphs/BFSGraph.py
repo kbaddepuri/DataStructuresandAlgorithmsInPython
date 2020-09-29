@@ -12,7 +12,7 @@ class Graph(object):
         # Mark all vertices as not visited
         visited = [False] * len(self.graph)
 
-        # Create aqueue for bfs
+        # Create a queue for bfs
         queue = []
 
         # Mark source Node as visited and enqueue it
