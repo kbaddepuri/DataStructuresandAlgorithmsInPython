@@ -1,4 +1,5 @@
 """
+
 Binary Search Tree is a node-based binary tree data structure which has the following properties:
 
 The left subtree of a node contains only nodes with keys lesser than the node’s key.
@@ -8,29 +9,32 @@ The left and right subtree each must also be a binary search tree.
                             50
                           /    \
                         40      53
-                     /    \        \
+                     /    \\        \
                    30      42        57
 """
 
 
-class Node(object):
+class Node:
+    """
+    Simple Node
+    """
+
     def __init__(self, value):
         self.value = value
         self.right = None
         self.left = None
 
 
-class BinarySearchTree(object):
+class BinarySearchTree:
+    """
+    Basic Binary Search Tree
+    """
+
     def __init__(self):
         self.root = None
 
     def get_root_node(self):
         return self.root
-
-    def insert(self, root, node):
-        if self.root is None:
-            self.root = node
-            return
 
     def insert(self, root, node):
         if self.root is None:
