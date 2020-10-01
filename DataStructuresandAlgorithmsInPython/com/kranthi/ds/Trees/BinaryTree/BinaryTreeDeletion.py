@@ -1,11 +1,11 @@
-
-class Node(object):
+class Node:
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.right = right
         self.left = left
 
-class BinaryTree(object):
+
+class BinaryTree:
     def __init__(self):
         self.root = None
 
@@ -17,9 +17,8 @@ class BinaryTree(object):
             self.root = node
             return
 
-        q = []
-        q.append(self.root)
-        while(len(q)):
+        q = [self.root]
+        while len(q):
             temp = q.pop(0)
 
             if temp.left is None:
@@ -40,12 +39,10 @@ class BinaryTree(object):
         print(temp.value, end=" ")
         self.inorder(temp.right)
 
-
     def delete_deepest(self, deep_node):
-        q = []
-        q.append(self.root)
+        q = [self.root]
 
-        while(len(q)):
+        while len(q):
             temp = q.pop(0)
             if temp is deep_node:
                 temp = None
@@ -65,7 +62,6 @@ class BinaryTree(object):
                 else:
                     q.append(temp.right)
 
-
     def delete(self, value):
         """
             Rules to delete value:
@@ -80,11 +76,10 @@ class BinaryTree(object):
                 return None
             return self.root
 
-        q = []
-        q.append(self.root)
+        q = [self.root]
         value_node = None
         temp = None
-        while(len(q)):
+        while len(q):
             temp = q.pop(0)
             if temp.value == value:
                 value_node = temp
@@ -113,7 +108,7 @@ if __name__ == "__main__":
     print("Traversing tree after inserting a new value : ")
     binaryTree.insert(30)
     binaryTree.inorder(binaryTree.root)
-    #delete 6 and 30 should replace 6 node
+    # delete 6 and 30 should replace 6 node
     binaryTree.delete(6)
     print("Traversing tree after deleting a new value : ")
     binaryTree.inorder(binaryTree.root)
@@ -122,9 +117,9 @@ if __name__ == "__main__":
 
 inorder output before deleting: 46 6 56 4 30 89
           4                                                4               inorder output after deleting: 46 30 56 4 89
-        /   \                                            /   \
+        /   \\                                            /   \
       6       89  ------> after deleting 6 --->        30      89
-    /   \    /                                       /    \
+    /   \\    /                                       /    \
   46     56 30                                      46      56
 
 """

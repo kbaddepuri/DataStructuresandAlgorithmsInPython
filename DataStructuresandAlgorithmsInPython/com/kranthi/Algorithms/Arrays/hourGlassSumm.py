@@ -1,3 +1,4 @@
+#!/bin/python3
 """
 Given a  2D Array, :
 
@@ -12,7 +13,8 @@ We define an hourglass in  to be a subset of values with indices falling in this
 a b c
   d
 e f g
-There are  hourglasses in , and an hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for every hourglass in , then print the maximum hourglass sum.
+There are  hourglasses in , and an hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for
+every hourglass in , then print the maximum hourglass sum.
 
 For example, given the 2D array:
 
@@ -37,7 +39,8 @@ Note: If you have already solved the Java domain's Java 2D Array challenge, you 
 
 Function Description
 
-Complete the function hourglassSum in the editor below. It should return an integer, the maximum hourglass sum in the array.
+Complete the function hourglassSum in the editor below. It should return an integer, the maximum hourglass sum in the
+array.
 
 hourglassSum has the following parameter(s):
 
@@ -76,31 +79,27 @@ The hourglass with the maximum sum () is:
 1 2 4
 """
 
-#!/bin/python3
-
-import math
 import os
-import random
-import re
-import sys
+
 
 # Complete the hourglassSum function below.
-def hourglassSum(arr):
-    hsum = None
-    a = arr
-    l = len(arr)
-    for i in range(l):
-        for j in range(l):
-            if (j+2 <= l-1) and (i+2 <= l - 1):
-                s1 = a[i][j]+a[i][j+1]+a[i][j+2]
-                s2 = a[i+1][j+1]
-                s3 = a[i+2][j]+a[i+2][j+1]+a[i+2][j+2]
-                if hsum is None:
-                    hsum = s1 + s2 + s3
-                elif hsum < (s1 + s2 + s3):
-                    hsum = s1 + s2 + s3
-    print(hsum)
-    return hsum
+def hourglassSum(array):
+    hourly_sum = None
+    a = array
+    max_len = len(array)
+    for i in range(max_len):
+        for j in range(max_len):
+            if (j + 2 <= max_len - 1) and (i + 2 <= max_len - 1):
+                s1 = a[i][j] + a[i][j + 1] + a[i][j + 2]
+                s2 = a[i + 1][j + 1]
+                s3 = a[i + 2][j] + a[i + 2][j + 1] + a[i + 2][j + 2]
+                if hourly_sum is None:
+                    hourly_sum = s1 + s2 + s3
+                elif hourly_sum < (s1 + s2 + s3):
+                    hourly_sum = s1 + s2 + s3
+    print(hourly_sum)
+    return hourly_sum
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

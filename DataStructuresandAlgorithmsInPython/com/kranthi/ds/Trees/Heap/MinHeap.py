@@ -7,10 +7,10 @@ can be at indexes 5, 6, 7, 8, 9 in the given array. """
 
 from heapq import heapify, heappush, heappop
 
-def sortingUsingMinHeap(arr: list, size: int, k: int) -> list:
 
+def sortingUsingMinHeap(array: list, size: int, k_elem: int) -> list:
     # list of first k+1 items
-    heap = arr[:k + 1]
+    heap = array[:k_elem + 1]
 
     # heapify to convert list to min heap
     heapify(heap)
@@ -18,16 +18,17 @@ def sortingUsingMinHeap(arr: list, size: int, k: int) -> list:
     # pop data and heapify remaining element after inserting into heap
 
     target_index = 0
-    for rem_elem_idx in range(k + 1, size):
-        arr[target_index] = heappop(heap)
-        heappush(heap, arr[rem_elem_idx])
+    for rem_elem_idx in range(k_elem + 1, size):
+        array[target_index] = heappop(heap)
+        heappush(heap, array[rem_elem_idx])
         target_index += 1
 
     while heap:
-        arr[target_index] = heappop(heap)
+        array[target_index] = heappop(heap)
         target_index += 1
 
-    return arr
+    return array
+
 
 arr = [2, 6, 3, 12, 56, 8]
 n = len(arr)
