@@ -1,4 +1,5 @@
-![Python package](https://github.com/kbaddepuri/DataStructuresandAlgorithmsInPython/workflows/Python%20package/badge.svg)
+
+![Python package](https://github.com/kbaddepuri/DataStructuresandAlgorithmsInPython/workflows/Python%20package/badge.svg)![Testing](https://github.com/kbaddepuri/DataStructuresandAlgorithmsInPython/workflows/Testing/badge.svg)
 
 
 # Data Structures and Algorithms In Python
