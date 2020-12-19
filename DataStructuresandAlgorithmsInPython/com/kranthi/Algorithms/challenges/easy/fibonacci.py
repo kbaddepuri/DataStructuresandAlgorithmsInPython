@@ -25,4 +25,4 @@ def fibonacciSumOfNo(n: str) -> str:
 
     return sumN
 
-print(fibonacciSumOfNo(5))
+print(fibonacciSumOfNo(9))

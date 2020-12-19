@@ -4,7 +4,7 @@ def heapify(array: list, n: int, ith: int):
     r = 2 * ith + 2
 
     # see if left child of root exist and is greater than root
-    if (l < n) and (array[ith] < array[l]):
+    if (l < n) and (array[largest] < array[l]):
         largest = l
     # see if right child of root exists and is greater than root
     if r < n and array[largest] < array[r]:
