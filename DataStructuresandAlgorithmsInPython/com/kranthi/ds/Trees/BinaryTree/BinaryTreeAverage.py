@@ -7,7 +7,7 @@ class Node(object):
 
 def _collect(node, data, depth=0):
     if not node:
-        return None;
+        return None
 
     if depth not in data:
         data[depth] = (node.value, 1)

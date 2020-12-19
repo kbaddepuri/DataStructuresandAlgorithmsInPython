@@ -30,4 +30,5 @@ def add_two_binary_nums(num1:str, num2: str) -> str:
 
     return result
 
+
 print(add_two_binary_nums('11010', '1011'))

@@ -47,6 +47,7 @@ class BinarySearchTree:
             else:
                 self.insert(root.right, node)
         else:
+            # TODO:
             if root.left is None:
                 root.left = node
             else:
