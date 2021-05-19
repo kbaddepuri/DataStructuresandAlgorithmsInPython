@@ -32,7 +32,6 @@ def partition(array, l, r):
     return i + 1
 
 
-
 arr = [6, -8, 0, 8, -2, 5, 7]
 quickSort(arr, 0, len(arr) - 1)
 print(arr)

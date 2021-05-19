@@ -28,6 +28,6 @@ def increaseValuue(arr):
 
 
 
-arr = [9,9,9,8,9]
+arr = [9,9,9,9,9]
 print(increaseValuue(arr))
 

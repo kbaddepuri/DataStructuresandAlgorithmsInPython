@@ -32,6 +32,7 @@ def headSort(arry: list):
         heapify(arry, i, 0)
 
 
+
 arr = [12, 11, 13, 5, 6, 7]
 headSort(arr)
 

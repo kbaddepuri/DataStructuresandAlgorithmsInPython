@@ -9,7 +9,7 @@ Example:
 Input:
 List1: 5->6->3 // represents number 365
 List2: 8->4->2 // represents number 248
-Output:
+Output:l
 Resultant list: 3->1->6 // represents number 613
 Explanation: 365 + 248 = 613
 Input:
@@ -31,6 +31,7 @@ If one of the list has reached the end then take 0 as its digit.
 Continue it until both the lists end.
 If the sum of two digits is greater than 9 then set carry as 1 and the current digit as sum % 10
 """
+
 class Node:
     def __init__(self, val):
         self.data = val

@@ -24,7 +24,6 @@ class Node:
         self.right = None
         self.left = None
 
-
 class BinarySearchTree:
     """
     Basic Binary Search Tree
@@ -62,14 +61,12 @@ class BinarySearchTree:
         self.inorder(temp.right)
 
     def search(self, value, temp=None):
-        if temp is None:
-            temp = self.root
         if temp is None or temp.value == value:
             return temp
 
         # if value is greater than root value
         if temp.value < value:
-            self.search(value, temp.right)
+            return self.search(value, temp.right)
 
         # if value is less than root value
         return self.search(value, temp.left)

@@ -49,3 +49,5 @@ def nCrModP(n, r, p):
             # nCj = (n-1)C(j-1) + (n-1)Cj
             C[j] = (C[j] + C[j-1]) % p
     return C[r]
+
+print(__file__)

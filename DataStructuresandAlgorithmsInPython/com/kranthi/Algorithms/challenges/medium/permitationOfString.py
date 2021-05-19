@@ -22,7 +22,7 @@ def  permute(a, l, r):
             a[l], a[i] = a[i], a[l]
 
 
-string = "ABC"
+string = "ABCDEF"
 n = len(string)
 lst = list(string)
 permute(lst, 0, n-1)

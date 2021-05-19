@@ -12,7 +12,7 @@ def _collect(node, data, depth=0):
     if depth not in data:
         data[depth] = (node.value, 1)
     else:
-        val, count = depth[data]
+        val, count = data[depth]
         val += node.value
         count += 1
         data[depth] = (val, count)

@@ -12,4 +12,5 @@ def reverseDigits(num):
 
     print(rev)
 
+
 reverseDigits(4562)
