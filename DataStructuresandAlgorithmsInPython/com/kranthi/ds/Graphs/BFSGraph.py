@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-
 class Graph(object):
     def __init__(self):
         self.graph = defaultdict(list)
@@ -30,7 +29,6 @@ class Graph(object):
                 if visited[i] == False:
                     queue.append(i)
                     visited[i] = True
-
 
 
 # Driver code

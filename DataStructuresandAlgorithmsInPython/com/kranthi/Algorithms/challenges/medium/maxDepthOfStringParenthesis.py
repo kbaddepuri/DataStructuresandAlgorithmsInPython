@@ -24,10 +24,10 @@ Output : -1
 Input : S = "(b) ((c) ()"
 Output : -1
 """
+
 def maxDepth(S:str) -> int:
     cur_max = 0
     depth = 0
-    n = len(S)
 
     for i in S:
         if i == '(':
@@ -39,6 +39,7 @@ def maxDepth(S:str) -> int:
                 cur_max -= 1
             else:
                 return -1
+
     return depth
 
 s = "(((X))(((Y))))"

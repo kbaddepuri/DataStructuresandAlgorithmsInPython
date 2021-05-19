@@ -3,7 +3,6 @@ BFS algorithm
 """
 from collections import deque
 
-
 class Node(object):
     def __init__(self, key):
         self.data = key
