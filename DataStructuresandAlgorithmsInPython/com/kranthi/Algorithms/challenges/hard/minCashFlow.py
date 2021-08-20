@@ -1,3 +1,4 @@
+N = 3
 def getMin(arr):
 
     minInd = 0
