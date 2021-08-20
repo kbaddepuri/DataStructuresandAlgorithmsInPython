@@ -15,7 +15,8 @@ lint:
 	pylint --ignore=vendor DataStructuresandAlgorithmsInPython | tee pylintout.text
 
 bld:
-	python2.7 setup.py build
+	pip install -r requirements.txt
+	python setup.py build
 
 clean:
 	-rm -rf dist/
