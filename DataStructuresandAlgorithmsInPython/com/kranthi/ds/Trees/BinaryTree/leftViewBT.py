@@ -22,31 +22,29 @@ class Node:
         self.value = val
         self.left = None
         self.right = None
-        
-class LeftViewOfBT:
+
+class LeftView:
     def __init__(self):
         self.root = None
         self.max_level = 0
 
-    def getRoot(self):
-        return self.root
-
-    def leftView(self, root, level):
+    def left_view(self, root, level):
         if root is None:
             return
         if self.max_level < level:
-            print("%d\t" %root.value)
+            print(f"{root.value}", end=" ")
             self.max_level = level
 
-        self.leftView(root.left, level + 1)
-        self.leftView(root.right, level + 1)
+        self.left_view(root.left, level + 1)
+        self.left_view(root.right, level + 1)
+
 
 node = Node(1)
 node.left = Node(10)
 node.right = Node(20)
 node.right.right = Node(40)
-lv = LeftViewOfBT()
+lv = LeftView()
 
-lv.leftView(node, 1)
+lv.left_view(node, 1)
 
             

@@ -1,29 +1,28 @@
-
-def stockBuySell(price):
-    n = len(price)
-
+def stockAndBySell(prices):
+    n = len(prices)
     if n == 1:
         return
     i = 0
-
-    while i < n-1:
-        #find local minima note that limit is n-2 as we are  comparing wth next element
-        while ((i < n-1) and (price[i+1] <= price[i])):
+    profit = 0
+    while i < (n-1):
+        # find local min
+        while i < (n-1) and prices[i + 1] <= prices[i]:
             i += 1
-
-        if (i == n -1):
-            break
-
+            if i == n-1:
+                break
         buy = i
         i += 1
 
-        # find local maxima
-        while ((i < n) and (price[i] >= price[i-1])):
+        # find local max
+        while i < n and prices[i] >= prices[i-1]:
             i += 1
 
-        sell = i - 1
+        sell = i-1
 
-        print("Buy on day: {}\t sell on day: {}".format(buy, sell))
+        print(f"Buy on day: {buy} and sell on day: {sell}")
+        profit += prices[sell] - prices[buy]
+    print(f"profit: {profit}")
+
 
 price = [100, 180, 260, 310, 40, 535, 695]
-stockBuySell(price)
+stockAndBySell(price)
