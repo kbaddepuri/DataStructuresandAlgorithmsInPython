@@ -1,4 +1,26 @@
+def getMin(arr):
 
+    minInd = 0
+    for i in range(1, N):
+        if (arr[i] < arr[minInd]):
+            minInd = i
+    return minInd
+
+# A utility function that returns
+# index of maximum value in arr[]
+def getMax(arr):
+
+    maxInd = 0
+    for i in range(1, N):
+        if (arr[i] > arr[maxInd]):
+            maxInd = i
+    return maxInd
+
+# A utility function to
+# return minimum of 2 values
+def minOf2(x, y):
+
+    return x if x < y else y
 def minCashFlow(graph):
     # create an array amount[]
     N = len(graph)
