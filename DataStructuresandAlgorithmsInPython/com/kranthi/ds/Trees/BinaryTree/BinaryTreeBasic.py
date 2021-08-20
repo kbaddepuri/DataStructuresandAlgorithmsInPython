@@ -1,4 +1,37 @@
 
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left=  left
+        self.right = right
+
+class BinaryTree:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, val):
+        node = Node(val)
+        temp = self.root
+
+        if temp is None:
+            self.root = node
+            return
+        q = []
+        q.append(temp)
+        while len(q):
+            temp = q[0]
+            q.pop(0)
+            if not temp.left:
+                temp.left = node
+                break
+            else:
+                q.append(temp.left)
+
+            if not temp.right:
+                temp.right = node
+                break
+            else:
+                q.append(temp.right)
 
 
 class Node(object):

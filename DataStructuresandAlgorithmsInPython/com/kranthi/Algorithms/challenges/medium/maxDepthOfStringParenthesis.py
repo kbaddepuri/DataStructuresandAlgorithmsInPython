@@ -42,5 +42,6 @@ def maxDepth(S:str) -> int:
 
     return depth
 
+
 s = "(((X))(((Y))))"
 print (maxDepth(s))

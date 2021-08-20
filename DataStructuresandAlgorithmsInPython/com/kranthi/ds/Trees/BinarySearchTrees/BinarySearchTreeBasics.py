@@ -82,4 +82,5 @@ if __name__ == "__main__":
     bst.insert(bst.get_root_node(), Node(57))
 
     bst.inorder(bst.get_root_node())
-    print(bst.search(30).value)
+    print()
+    print(bst.search(30, bst.get_root_node()).value)

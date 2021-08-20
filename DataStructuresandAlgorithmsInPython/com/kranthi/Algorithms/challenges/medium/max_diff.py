@@ -10,3 +10,6 @@ def diff(arr, n):
             min_elem = arr[i]
 
     return max_diff
+
+
+print(diff([1,2,3,4,-10,6,10], 7))
