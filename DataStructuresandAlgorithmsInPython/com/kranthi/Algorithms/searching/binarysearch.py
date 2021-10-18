@@ -13,19 +13,19 @@ def binarySearchUsingWhile(arr, key):
             l = mid - 1
 
 def binarysearch(arr, l, r, key):
-    if r >= l:
-        mid = (l + r) // 2
-        if arr[mid] == key:
-            return mid
-        elif arr[mid] > key:
-            return binarysearch(arr, l, mid - 1, key)
-        else:
-            return binarysearch(arr, mid + 1, r, key)
+    if l > r:
+        return -1
+    mid = (r + l)//2
+    if arr[mid] == key:
+        return mid
 
+    if arr[mid] > key:
+        return binarysearch(arr, l, mid - 1, key)
     else:
-         return -1
+        return binarysearch(arr, mid + 1, r, key)
+
 arr = [ 2, 3, 4, 10, 40 ]
-x = 10
+x = 1
 
 # Function call
 result = binarysearch(arr, 0, len(arr)-1, x)
