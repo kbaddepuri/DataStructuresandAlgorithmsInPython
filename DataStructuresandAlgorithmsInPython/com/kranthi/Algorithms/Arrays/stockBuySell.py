@@ -24,5 +24,6 @@ def stockAndBySell(prices):
     print(f"profit: {profit}")
 
 
+
 price = [100, 180, 260, 310, 40, 535, 695]
 stockAndBySell(price)

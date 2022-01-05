@@ -1,7 +1,8 @@
 """
 Minimum Increment / decrement to make array elements equal
 
-Given an array of integers where ￼. In one operation you can either Increment/Decrement any element by 1. The task is to find the minimum operations needed to be performed on the array elements to make all array elements equal.
+Given an array of integers where ￼. In one operation you can either Increment/Decrement any element by 1.
+The task is to find the minimum operations needed to be performed on the array elements to make all array elements equal.
 Examples:
 
 

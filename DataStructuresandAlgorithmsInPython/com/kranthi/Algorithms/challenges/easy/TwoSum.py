@@ -30,7 +30,7 @@ class Solution:
         for i in range(len(nums)):
             temp = target - nums[i]
             if temp in s:
-                return [i, s[temp]]
+                return [target - nums[i], nums[i]]
             s[nums[i]] = i
 
 s = Solution()
